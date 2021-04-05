@@ -1,0 +1,14 @@
+tests:
+  - name: Setup typer Tests
+    command: |
+        TYPER_VERSION=$(python -c "import typer; print(typer.__version__)")
+        TYPER_COMMIT=${TYPER_VERSION#*+}
+        conda install -y git
+        git clone https://github.com/tiangolo/typer.git
+        cd typer
+        git checkout ${TYPER_COMMIT}
+        conda install -y pytest>=4.6.5 pytest-timeout mock coverage
+  - name: Run typer tests
+    command: |
+        cd typer
+        pytest -v tests/

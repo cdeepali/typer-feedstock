@@ -22,8 +22,6 @@ requirements:
   run:
     - python
     - click {{ click }}
-    - colorama {{ colorama }}
-    - shellingham {{ shellingham }}
 
 test:
   imports:

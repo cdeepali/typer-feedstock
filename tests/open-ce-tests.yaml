@@ -7,7 +7,7 @@ tests:
         git clone https://github.com/tiangolo/typer.git
         cd typer
         git checkout ${TYPER_COMMIT}
-        conda install -y pytest>=4.6.5 pytest-timeout mock coverage
+        conda install -y pytest>=4.6.5 pytest-timeout mock coverage shellingham
   - name: Run typer tests
     command: |
         cd typer

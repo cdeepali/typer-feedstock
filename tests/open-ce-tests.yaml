@@ -12,3 +12,5 @@ tests:
     command: |
         cd typer
         pytest -v tests/
+  - name: Clean tests
+    command: rm -rf typer
